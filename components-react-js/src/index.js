@@ -30,15 +30,34 @@ import App from './App';
 
 // Props //
 
-function First(props) {
-  return (
-    <div>Heyyy {props.name}</div>
-  );
+// function First(props) {
+//   return (
+//     <div>Heyyy {props.name}</div>
+//   );
+// }
+
+// function SampleFun(props) {
+//   console.log("props", props);
+//   return <div>function {props.name} <First name={props.name}/></div>
+// }
+
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(<SampleFun name="mani" age="21" />);
+
+// Class Props //
+
+class First extends React.Component {
+  render(){
+    console.log("this",this);
+    return <div>First Class Component {this.props.name}</div>
+  }
 }
 
-function SampleFun(props) {
-  console.log("props", props);
-  return <div>function {props.name} <First name={props.name}/></div>
+class SampleFun extends React.Component {
+  render(){
+    console.log("this",this);
+    return <div>Class Component {this.props.name} <First name = {this.props.name}/></div>
+  }
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
