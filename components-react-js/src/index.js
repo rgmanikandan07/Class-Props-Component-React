@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+// import App from './App';
+import App2 from './class-lifecycle';
 
 
 // Class // 
@@ -46,31 +47,33 @@ import App from './App';
 
 // Class Props //
 
-class First extends React.Component {
-  render(){
-    console.log("this",this);
-    return <div>First Class Component {this.props.name}</div>
-  }
-}
+// class First extends React.Component {
+//   render(){
+//     console.log("this",this);
+//     return <div>First Class Component {this.props.name}</div>
+//   }
+// }
 
-class SampleFun extends React.Component {
-  render(){
-    console.log("this",this);
-    return <div>Class Component {this.props.name} <First name = {this.props.name}/></div>
-  }
-}
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<SampleFun name="mani" age="21" />);
-
-
-
-
+// class SampleFun extends React.Component {
+//   render(){
+//     console.log("this",this);
+//     return <div>Class Component {this.props.name} <First name = {this.props.name}/></div>
+//   }
+// }
 
 // const root = ReactDOM.createRoot(document.getElementById('root'));
-// root.render(
-//   <React.StrictMode>
-        // <App />
-//   </React.StrictMode>
-// );
+// root.render(<SampleFun name="mani" age="21" />);
+
+
+
+
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+        {/* <App /> */}
+        {/* <Main /> */}
+        <App2 />
+  </React.StrictMode>
+);
 
